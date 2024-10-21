@@ -1,0 +1,182 @@
+package BetterCodeAnswer.Medium.Array;
+
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.PriorityQueue;
+
+/**
+ * <a class="mr-2 text-label-1 dark:text-dark-label-1 hover:text-label-1 dark:hover:text-dark-label-1 text-lg font-medium" href="/problems/design-a-food-rating-system/">2353.Design a Food Rating System</a>
+ * 
+ * <div class="px-5 pt-4"><div class="flex"></div><div class="xFUwe" data-track-load="description_content"><p>Design a food rating system that can do the following:</p>
+
+<ul>
+	<li><strong>Modify</strong> the rating of a food item listed in the system.</li>
+	<li>Return the highest-rated food item for a type of cuisine in the system.</li>
+</ul>
+
+<p>Implement the <code>FoodRatings</code> class:</p>
+
+<ul>
+	<li><code>FoodRatings(String[] foods, String[] cuisines, int[] ratings)</code> Initializes the system. The food items are described by <code>foods</code>, <code>cuisines</code> and <code>ratings</code>, all of which have a length of <code>n</code>.
+
+	<ul>
+		<li><code>foods[i]</code> is the name of the <code>i<sup>th</sup></code> food,</li>
+		<li><code>cuisines[i]</code> is the type of cuisine of the <code>i<sup>th</sup></code> food, and</li>
+		<li><code>ratings[i]</code> is the initial rating of the <code>i<sup>th</sup></code> food.</li>
+	</ul>
+	</li>
+	<li><code>void changeRating(String food, int newRating)</code> Changes the rating of the food item with the name <code>food</code>.</li>
+	<li><code>String highestRated(String cuisine)</code> Returns the name of the food item that has the highest rating for the given type of <code>cuisine</code>. If there is a tie, return the item with the <strong>lexicographically smaller</strong> name.</li>
+</ul>
+
+<p>Note that a string <code>x</code> is lexicographically smaller than string <code>y</code> if <code>x</code> comes before <code>y</code> in dictionary order, that is, either <code>x</code> is a prefix of <code>y</code>, or if <code>i</code> is the first position such that <code>x[i] != y[i]</code>, then <code>x[i]</code> comes before <code>y[i]</code> in alphabetic order.</p>
+
+<p>&nbsp;</p>
+<p><strong class="example">Example 1:</strong></p>
+
+<pre><strong>Input</strong>
+["FoodRatings", "highestRated", "highestRated", "changeRating", "highestRated", "changeRating", "highestRated"]
+[[["kimchi", "miso", "sushi", "moussaka", "ramen", "bulgogi"], ["korean", "japanese", "japanese", "greek", "japanese", "korean"], [9, 12, 8, 15, 14, 7]], ["korean"], ["japanese"], ["sushi", 16], ["japanese"], ["ramen", 16], ["japanese"]]
+<strong>Output</strong>
+[null, "kimchi", "ramen", null, "sushi", null, "ramen"]
+
+<strong>Explanation</strong>
+FoodRatings foodRatings = new FoodRatings(["kimchi", "miso", "sushi", "moussaka", "ramen", "bulgogi"], ["korean", "japanese", "japanese", "greek", "japanese", "korean"], [9, 12, 8, 15, 14, 7]);
+foodRatings.highestRated("korean"); // return "kimchi"
+                                    // "kimchi" is the highest rated korean food with a rating of 9.
+foodRatings.highestRated("japanese"); // return "ramen"
+                                      // "ramen" is the highest rated japanese food with a rating of 14.
+foodRatings.changeRating("sushi", 16); // "sushi" now has a rating of 16.
+foodRatings.highestRated("japanese"); // return "sushi"
+                                      // "sushi" is the highest rated japanese food with a rating of 16.
+foodRatings.changeRating("ramen", 16); // "ramen" now has a rating of 16.
+foodRatings.highestRated("japanese"); // return "ramen"
+                                      // Both "sushi" and "ramen" have a rating of 16.
+                                      // However, "ramen" is lexicographically smaller than "sushi".
+</pre>
+
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
+
+<ul>
+	<li><code>1 &lt;= n &lt;= 2 * 10<sup>4</sup></code></li>
+	<li><code>n == foods.length == cuisines.length == ratings.length</code></li>
+	<li><code>1 &lt;= foods[i].length, cuisines[i].length &lt;= 10</code></li>
+	<li><code>foods[i]</code>, <code>cuisines[i]</code> consist of lowercase English letters.</li>
+	<li><code>1 &lt;= ratings[i] &lt;= 10<sup>8</sup></code></li>
+	<li>All the strings in <code>foods</code> are <strong>distinct</strong>.</li>
+	<li><code>food</code> will be the name of a food item in the system across all calls to <code>changeRating</code>.</li>
+	<li><code>cuisine</code> will be a type of cuisine of <strong>at least one</strong> food item in the system across all calls to <code>highestRated</code>.</li>
+	<li>At most <code>2 * 10<sup>4</sup></code> calls <strong>in total</strong> will be made to <code>changeRating</code> and <code>highestRated</code>.</li>
+</ul>
+</div></div>
+ */
+public class DesignAFoodRatingSystem {
+    public static void main(String[] args) {
+        Object[][][] tests = {
+            {
+                {"FoodRatings", "highestRated", "highestRated", "changeRating", "highestRated", "changeRating", "highestRated"},
+                {"kimchi", "miso", "sushi", "moussaka", "ramen", "bulgogi"},
+                {"korean", "japanese", "japanese", "greek", "japanese", "korean"},
+                {9, 12, 8, 15, 14, 7},
+                {"korean"},
+                {"japanese"},
+                {"sushi", 16},
+                {"japanese"},
+                {"ramen", 16},
+                {"japanesse"},
+            }
+        };
+
+        for (Object[][] objects : tests) {
+            int index = 4;
+            Object[] answer = new Object[objects[0].length];
+            String[] 
+                actions = Arrays.asList(objects[0]).toArray(new String[objects[0].length]),
+                foods = Arrays.asList(objects[1]).toArray(new String[objects[1].length]), 
+                cuisines = Arrays.asList(objects[2]).toArray(new String[objects[2].length]); 
+            int[] ratings =  Arrays.stream(objects[3]).mapToInt(t -> (int) t ).toArray();
+            
+            FoodRatings foodRatings = new FoodRatings(foods, cuisines, ratings);
+            answer[index] = null;
+
+            for (String action : actions) {
+                switch (action) {
+                    case "FoodRatings": break;
+                    case "changeRating":
+                        foodRatings.changeRating((String) objects[index][0], (int) objects[index][1]);
+                        answer[index-3] = null;
+                        index++;
+                        break;
+                    default:
+                        answer[index-3] = foodRatings.highestRated((String) objects[index][0]);
+                        index++;
+                        break;
+                }
+            }
+
+            System.out.println(Arrays.toString(answer));
+        }
+    }
+}
+
+// 144 ms 71.5 MB
+class FoodRatings {
+    public class Info{
+        String food;
+        String cuisine;
+        int rating;
+        public Info(String food,String cuisine,int rating){
+            this.food=food;
+            this.cuisine=cuisine;
+            this.rating=rating;
+        }
+    }
+    Map<String,PriorityQueue<Info>> cuisineMap;
+    Map<String, Info> foodMap;
+    
+
+    public FoodRatings(String[] foods, String[] cuisines, int[] ratings) {
+        cuisineMap=new HashMap<>();
+        foodMap=new HashMap<>();
+         for(int i=0; i<foods.length; i++){
+            Info combo=new Info(foods[i],cuisines[i],ratings[i]);
+            foodMap.put(foods[i],combo);
+            if(cuisineMap.containsKey(cuisines[i])){
+                cuisineMap.get(cuisines[i]).add(combo);
+            }
+            else{
+                PriorityQueue<Info> pq=new PriorityQueue<Info>(new Comparator<Info>(){
+                    @Override
+                    public int compare(Info a,Info b){
+                        int result=b.rating-a.rating;
+                        if(result==0){
+                            return (a.food).compareTo(b.food);
+                        }
+                        return result;
+                    } 
+                }); 
+                pq.add(combo);
+                cuisineMap.put(cuisines[i],pq);
+            }
+        }
+    }
+    
+    public void changeRating(String food, int newRating) {
+        Info prev=foodMap.get(food);
+        Info curr= new Info(food,prev.cuisine,newRating);
+        foodMap.put(food,curr);
+        prev.food="";
+        cuisineMap.get(prev.cuisine).add(curr);
+    }
+    
+    public String highestRated(String cuisine) {
+        while( cuisineMap.get(cuisine).peek().food.equals("")){
+            cuisineMap.get(cuisine).remove();
+        }
+        return cuisineMap.get(cuisine).peek().food;
+    }
+   
+}

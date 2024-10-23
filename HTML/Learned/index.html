@@ -1,0 +1,168 @@
+<!DOCTYPE html> <!-- All HTML documents must start with a <!DOCTYPE> declaration -->
+<html lang="en"> <!-- Opening tag 
+        Attribute: lang = "language" (set up your page's language).
+        Vietnam: vi.
+    --> 
+
+    <!-- TODO: learn more HTML -->
+    <head>
+        <!-- meta tag -->
+        <meta charset="UTF-8"> <!-- meta tag for general-->
+        <meta name="author" content="Bui Tien Thanh" > <!-- meta tag for uthor's name -->
+        <meta name="description" content="This page contain all the things I am learning how to create as I learn HTML">
+        
+        <!-- metadata in this area --> 
+        <title> 
+            My First Web PAGE 
+        </title>
+
+        <!-- 
+            rel stand for "relation"
+            href stand for "hyper link"
+            -> add icon to the webpage.
+        -->
+        <link
+            rel="icon" href="html5.png" type="image/x-icon"
+        >
+
+        <!-- style element to put quick CSS -->
+        <!-- <style>
+            html {
+                font-size: 22px;
+            }
+            
+            body {
+                background-color: #333;
+                color: whitesmoke;
+            }
+        </style> -->
+        <!-- Replace with link using an .css file -->
+        <link 
+            rel="stylesheet" href="style.css" type="text/css"
+        >
+        
+    </head>
+
+    <body>
+        <!-- Part of the page can be see on the web -->
+        <h1>
+            <!-- Heading (Biggest) 
+                Can ONlY put 1 per page
+            -->
+            Hello World!
+        </h1>
+
+        <hr>
+            <!-- Create Navigation for web -->
+            <nav>
+                <li>
+                    <a href="#ready">Something 1</a>
+                </li>
+                <li>
+                    <a href="#news">Something 2</a>
+                </li>
+            </nav>
+    
+        <hr> <!--Add horizontal line-->
+        <section id="ready">
+            <h2>
+                <em> I'm ready to learn HTML. </em> <!--emphasis-->
+            </h2>
+            <p>
+                <!-- Paragraph Elements -->
+                This is my first web page.
+                <abbr title="Me and Only Me">
+                    <a href="https://validator.w3.org/#validate_by_upload">
+                        MOM
+                    </a> <!--Add link redirect-->
+                </abbr> <!--Add abbriviation-->
+            </p>
+            <address>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, incidunt. Aliquid quisquam corporis nostrum dicta neque aut saepe ratione numquam, nihil, optio eum, labore maxime qui quas corrupti! Vel, voluptates.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores animi quia molestiae repellendus, accusamus autem atque eligendi tenetur velit. Commodi, id maxime! Eligendi mollitia, corrupti necessitatibus consequuntur nemo voluptates temporibus.
+                ... Vietnam
+            </address>    
+        </section>
+
+        <hr>
+        <section id="news">
+            <h3>
+                Somthing news here!!!
+            </h3>
+            <p>
+                Nothing new here 
+                <!-- br stand for break line -->
+                <br> &nbsp; <!-- created extra space --> <strong>yet...</strong> <!--bold-->
+            </p>
+            <ol> <!--Order list-->
+                <li> <!--List item-->
+                    Update 1.
+
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium eaque, minus dolorum velit soluta rerum. Ducimus numquam qui alias voluptatum dignissimos autem provident officia, vero beatae asperiores amet optio. Illum.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus architecto expedita reprehenderit cum quisquam sint quia magnam accusantium aut nemo hic, ipsum, doloribus adipisci molestias quam amet? Dolorem, mollitia corrupti!
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi excepturi impedit laudantium maxime placeat deleniti, ullam facilis repellendus veniam ratione minima obcaecati corrupti blanditiis soluta illum ipsum? Debitis, ut praesentium.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat explicabo labore facilis excepturi eligendi autem ipsa fuga quidem accusamus laborum porro nemo doloremque incidunt voluptatum, dolorum neque. Quas, eius quibusdam!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia a deleniti corporis quibusdam voluptates dicta, laudantium expedita consequuntur. Dicta, sed! Quia nesciunt maxime alias dolores molestias, debitis tempore similique porro.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore porro voluptas asperiores rem ullam laborum, id dolore aliquid beatae doloremque deserunt nihil quas mollitia quaerat ipsum repudiandae architecto! Dicta, esse?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit vel, magni, reiciendis dolorum aliquam voluptates eum, amet obcaecati illo eligendi voluptas veniam in harum similique id aperiam doloribus officiis labore.
+                    </p>
+                </li>
+                <li>
+                    Update 2.
+
+                    <p>
+                        
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium eaque, minus dolorum velit soluta rerum. Ducimus numquam qui alias voluptatum dignissimos autem provident officia, vero beatae asperiores amet optio. Illum.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus architecto expedita reprehenderit cum quisquam sint quia magnam accusantium aut nemo hic, ipsum, doloribus adipisci molestias quam amet? Dolorem, mollitia corrupti!
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi excepturi impedit laudantium maxime placeat deleniti, ullam facilis repellendus veniam ratione minima obcaecati corrupti blanditiis soluta illum ipsum? Debitis, ut praesentium.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat explicabo labore facilis excepturi eligendi autem ipsa fuga quidem accusamus laborum porro nemo doloremque incidunt voluptatum, dolorum neque. Quas, eius quibusdam!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia a deleniti corporis quibusdam voluptates dicta, laudantium expedita consequuntur. Dicta, sed! Quia nesciunt maxime alias dolores molestias, debitis tempore similique porro.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore porro voluptas asperiores rem ullam laborum, id dolore aliquid beatae doloremque deserunt nihil quas mollitia quaerat ipsum repudiandae architecto! Dicta, esse?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit vel, magni, reiciendis dolorum aliquam voluptates eum, amet obcaecati illo eligendi voluptas veniam in harum similique id aperiam doloribus officiis labore.
+                    </p>
+                </li>
+                <li>
+                    Update 3.
+
+                    <p>
+                        
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium eaque, minus dolorum velit soluta rerum. Ducimus numquam qui alias voluptatum dignissimos autem provident officia, vero beatae asperiores amet optio. Illum.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus architecto expedita reprehenderit cum quisquam sint quia magnam accusantium aut nemo hic, ipsum, doloribus adipisci molestias quam amet? Dolorem, mollitia corrupti!
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi excepturi impedit laudantium maxime placeat deleniti, ullam facilis repellendus veniam ratione minima obcaecati corrupti blanditiis soluta illum ipsum? Debitis, ut praesentium.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat explicabo labore facilis excepturi eligendi autem ipsa fuga quidem accusamus laborum porro nemo doloremque incidunt voluptatum, dolorum neque. Quas, eius quibusdam!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia a deleniti corporis quibusdam voluptates dicta, laudantium expedita consequuntur. Dicta, sed! Quia nesciunt maxime alias dolores molestias, debitis tempore similique porro.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore porro voluptas asperiores rem ullam laborum, id dolore aliquid beatae doloremque deserunt nihil quas mollitia quaerat ipsum repudiandae architecto! Dicta, esse?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit vel, magni, reiciendis dolorum aliquam voluptates eum, amet obcaecati illo eligendi voluptas veniam in harum similique id aperiam doloribus officiis labore.
+                    </p>
+                </li>
+            </ol> 
+            <ul> <!--Unorder list-->
+                <li> <!--List item-->
+                    Update 1.
+                </li>
+                <li>
+                    Update 2.
+                </li>
+                <li>
+                    Update 3.
+                </li>
+            </ul>
+            <dl> <!--Description list-->
+                <dt>Something</dt> <!--dt stand for decription term-->
+                <dd>Description of Something</dd> <!--dd stand for decription detail-->
+    
+                <dt>Something 2</dt> 
+                <dd>Description of Something 2</dd>
+            </dl>
+        </section>
+        
+        <hr>
+        &lt;&lt;&lt; &copy; <a href="about.html"> Thanh </a> &gt;&gt;&gt;
+        <p>
+            <a href="#">Back to Top</a>
+        </p>
+
+    </body>
+
+</html> <!-- Closing tag -->

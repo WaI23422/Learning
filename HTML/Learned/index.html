@@ -22,7 +22,7 @@
             -> add icon to the webpage.
         -->
         <link
-            rel="icon" href="html5.png" type="image/x-icon"
+            rel="icon" href="img/html5.png" type="image/x-icon"
         >
 
         <!-- style element to put quick CSS -->
@@ -45,123 +45,420 @@
 
     <body>
         <!-- Part of the page can be see on the web -->
-        <h1>
-            <!-- Heading (Biggest) 
-                Can ONlY put 1 per page
-            -->
-            Hello World!
-        </h1>
+        <header>
+            <h1>
+                <!-- Heading (Biggest) 
+                    Can ONlY put 1 per page
+                -->
+                Hello World!
+            </h1>
 
-        <hr>
             <!-- Create Navigation for web -->
-            <nav>
-                <li>
-                    <a href="#ready">Something 1</a>
-                </li>
-                <li>
-                    <a href="#news">Something 2</a>
-                </li>
+            <nav aria-label="primary-navigation">
+                <ul>
+                    <li>
+                        <a href="#ready">Something 1</a>
+                    </li>
+                    <li>
+                        <a href="#news">Something 2</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
             </nav>
-    
-        <hr> <!--Add horizontal line-->
-        <section id="ready">
-            <h2>
-                <em> I'm ready to learn HTML. </em> <!--emphasis-->
-            </h2>
-            <p>
-                <!-- Paragraph Elements -->
-                This is my first web page.
-                <abbr title="Me and Only Me">
-                    <a href="https://validator.w3.org/#validate_by_upload">
-                        MOM
-                    </a> <!--Add link redirect-->
-                </abbr> <!--Add abbriviation-->
-            </p>
-            <address>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, incidunt. Aliquid quisquam corporis nostrum dicta neque aut saepe ratione numquam, nihil, optio eum, labore maxime qui quas corrupti! Vel, voluptates.
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores animi quia molestiae repellendus, accusamus autem atque eligendi tenetur velit. Commodi, id maxime! Eligendi mollitia, corrupti necessitatibus consequuntur nemo voluptates temporibus.
-                ... Vietnam
-            </address>    
-        </section>
+        </header>
+        
+        <main>
+            <hr> <!--Add horizontal line-->
+            <article id="ready"> <!--<section id="ready">-->
+                <h2>
+                    <em> I'm ready to learn HTML. </em> <!--emphasis-->
+                </h2>
+                <p>
+                    <!-- Paragraph Elements -->
+                    This is my first web page.
+                    <abbr title="Me and Only Me">
+                        <a href="https://validator.w3.org/#validate_by_upload">
+                            MOM
+                        </a> <!--Add link redirect-->
+                    </abbr> <!--Add abbriviation-->
+                </p>
+                <section>
+                    <h3>HTML5</h3>
+                
+                    <!-- 
+                        Add image to Web 
+                        alt : present when the source have problem
+                    -->
+                    <figure>
+                        <img 
+                            src="img/html5.png" 
+                            alt="HTML5 Logo" 
+                            title="Complimentary text" 
+                            width = "200" 
+                            loading="lazy"
+                        >
+                        <figcaption>
+                            This is caption
+                            <p>
+                                <code>&lt;h1&gt; Hello!!! &lt; /h1 &gt;</code>
+                            </p>
+                        </figcaption>
+                    </figure>
+                </section>
 
-        <hr>
-        <section id="news">
-            <h3>
-                Somthing news here!!!
-            </h3>
-            <p>
-                Nothing new here 
-                <!-- br stand for break line -->
-                <br> &nbsp; <!-- created extra space --> <strong>yet...</strong> <!--bold-->
-            </p>
-            <ol> <!--Order list-->
-                <li> <!--List item-->
-                    Update 1.
+                <section>
+                    <h2>Something Don't Know</h2>
+                    <address>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, incidunt. Aliquid quisquam corporis nostrum dicta neque aut saepe ratione numquam, nihil, optio eum, labore maxime qui quas corrupti! Vel, voluptates.
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores animi quia molestiae repellendus, accusamus autem atque eligendi tenetur velit. Commodi, id maxime! Eligendi mollitia, corrupti necessitatibus consequuntur nemo voluptates temporibus.
+                        ... Vietnam
+                    </address>   
 
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium eaque, minus dolorum velit soluta rerum. Ducimus numquam qui alias voluptatum dignissimos autem provident officia, vero beatae asperiores amet optio. Illum.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus architecto expedita reprehenderit cum quisquam sint quia magnam accusantium aut nemo hic, ipsum, doloribus adipisci molestias quam amet? Dolorem, mollitia corrupti!
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi excepturi impedit laudantium maxime placeat deleniti, ullam facilis repellendus veniam ratione minima obcaecati corrupti blanditiis soluta illum ipsum? Debitis, ut praesentium.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat explicabo labore facilis excepturi eligendi autem ipsa fuga quidem accusamus laborum porro nemo doloremque incidunt voluptatum, dolorum neque. Quas, eius quibusdam!
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia a deleniti corporis quibusdam voluptates dicta, laudantium expedita consequuntur. Dicta, sed! Quia nesciunt maxime alias dolores molestias, debitis tempore similique porro.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore porro voluptas asperiores rem ullam laborum, id dolore aliquid beatae doloremque deserunt nihil quas mollitia quaerat ipsum repudiandae architecto! Dicta, esse?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit vel, magni, reiciendis dolorum aliquam voluptates eum, amet obcaecati illo eligendi voluptas veniam in harum similique id aperiam doloribus officiis labore.
-                    </p>
-                </li>
-                <li>
-                    Update 2.
+                    <aside>
+                        <details>
+                            <summary>
+                                Lorem <mark> ???? </mark>
+                            </summary>
+                            <p> <time datetime="PT3H">??? hours</time>Write Some Random Things <time datetime="08:00">8 A:M</time></p>
+                        </details>
+                    </aside>
+                    
+                    <br>
+                    <table>
+                        <caption>
+                            My Schedule
+                        </caption>
+                        <thead> <!--table's head area-->
+                            <tr>
+                                <th>
+                                    &nbsp;
+                                </th>
+                                <th scope="col"> <!--tb stands for table's head-->
+                                    Time
+                                </th>
+                                <th scope="col">
+                                    Activity
+                                </th>
+                            </tr>
+                        </thead>
 
-                    <p>
+                        <tbody> <!--table's body area-->
+                            
+                            <tr> <!--tr stands for table row-->
+                                <th scope="row"> Morning </th>
+                                <td> <!--td stands for table data-->
+                                    <time datetime="08:00">8 A:M</time> - 
+                                    <time datetime="11:00">11 A:M</time>
+                                </td>
+                                <td>
+                                    Write Code
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">Break</th>
+                                <td> <!--td stands for table data-->
+                                    <time datetime="11:00">11 A:M</time> - 
+                                    <time datetime="12:00">12 P:M</time>
+                                </td>
+                                <td>
+                                    Eat lunch
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">Afterrnoon</th>
+                                <td> <!--td stands for table data-->
+                                    <time datetime="12:00">12 P:M</time> - 
+                                    <time datetime="05:00">5 P:M</time>
+                                </td>
+                                <td>
+                                    Study HTML
+                                </td>
+                            </tr>
+                            <tr>   
+                                <th scope="row">Evening</th>
+                                <td rowspan="2">All Other Times</td>
+                                <td>Free Time</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Night</th>
+                                <td>Sleep</td>
+                            </tr>
+                        </tbody>
                         
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium eaque, minus dolorum velit soluta rerum. Ducimus numquam qui alias voluptatum dignissimos autem provident officia, vero beatae asperiores amet optio. Illum.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus architecto expedita reprehenderit cum quisquam sint quia magnam accusantium aut nemo hic, ipsum, doloribus adipisci molestias quam amet? Dolorem, mollitia corrupti!
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi excepturi impedit laudantium maxime placeat deleniti, ullam facilis repellendus veniam ratione minima obcaecati corrupti blanditiis soluta illum ipsum? Debitis, ut praesentium.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat explicabo labore facilis excepturi eligendi autem ipsa fuga quidem accusamus laborum porro nemo doloremque incidunt voluptatum, dolorum neque. Quas, eius quibusdam!
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia a deleniti corporis quibusdam voluptates dicta, laudantium expedita consequuntur. Dicta, sed! Quia nesciunt maxime alias dolores molestias, debitis tempore similique porro.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore porro voluptas asperiores rem ullam laborum, id dolore aliquid beatae doloremque deserunt nihil quas mollitia quaerat ipsum repudiandae architecto! Dicta, esse?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit vel, magni, reiciendis dolorum aliquam voluptates eum, amet obcaecati illo eligendi voluptas veniam in harum similique id aperiam doloribus officiis labore.
-                    </p>
-                </li>
-                <li>
-                    Update 3.
+                        <tfoot>
+                            <tr>
+                                <td colspan="3"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur quibusdam quidem dolor sed ea, sint officia iure ad, non libero sapiente. Alias repudiandae sunt quam? Sunt praesentium aperiam molestiae officia!</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </section> 
+            </article>
 
+            <hr>
+            <article id="news"> <!--<section id="news">-->'
+                <h2>No One Know</h2>                
+                
+                <section>
+                    <h3>
+                        Somthing news here!!!
+                    </h3>
                     <p>
-                        
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium eaque, minus dolorum velit soluta rerum. Ducimus numquam qui alias voluptatum dignissimos autem provident officia, vero beatae asperiores amet optio. Illum.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus architecto expedita reprehenderit cum quisquam sint quia magnam accusantium aut nemo hic, ipsum, doloribus adipisci molestias quam amet? Dolorem, mollitia corrupti!
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi excepturi impedit laudantium maxime placeat deleniti, ullam facilis repellendus veniam ratione minima obcaecati corrupti blanditiis soluta illum ipsum? Debitis, ut praesentium.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat explicabo labore facilis excepturi eligendi autem ipsa fuga quidem accusamus laborum porro nemo doloremque incidunt voluptatum, dolorum neque. Quas, eius quibusdam!
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia a deleniti corporis quibusdam voluptates dicta, laudantium expedita consequuntur. Dicta, sed! Quia nesciunt maxime alias dolores molestias, debitis tempore similique porro.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore porro voluptas asperiores rem ullam laborum, id dolore aliquid beatae doloremque deserunt nihil quas mollitia quaerat ipsum repudiandae architecto! Dicta, esse?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit vel, magni, reiciendis dolorum aliquam voluptates eum, amet obcaecati illo eligendi voluptas veniam in harum similique id aperiam doloribus officiis labore.
+                        Nothing new here 
+                        <!-- br stand for break line -->
+                        <br> &nbsp; <!-- created extra space --> <strong>yet...</strong> <!--bold-->
                     </p>
-                </li>
-            </ol> 
-            <ul> <!--Unorder list-->
-                <li> <!--List item-->
-                    Update 1.
-                </li>
-                <li>
-                    Update 2.
-                </li>
-                <li>
-                    Update 3.
-                </li>
-            </ul>
-            <dl> <!--Description list-->
-                <dt>Something</dt> <!--dt stand for decription term-->
-                <dd>Description of Something</dd> <!--dd stand for decription detail-->
     
-                <dt>Something 2</dt> 
-                <dd>Description of Something 2</dd>
-            </dl>
-        </section>
+                    <figure>
+                        <img 
+                            src="img/html5.png" 
+                            alt="Nothing" 
+                            width="200"
+                            loading="lazy" 
+                        > <!-- 
+                            loading have 2 status eager | lazy 
+                            lazy help the web load faster.
+                        -->
+                        
+                        <figcaption>
+                            This is caption
+                            <p>
+                                <code>&lt;h1&gt; Hello World! &lt; /h1 &gt;</code>
+                            </p>
+                        </figcaption>
+                    </figure>
+                </section>
+                
+                <section>
+                    <h2>Maybe</h2>
+                    <ol> <!--Order list-->
+                        <li> <!--List item-->
+                            Update 1.
+    
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium eaque, minus dolorum velit soluta rerum. Ducimus numquam qui alias voluptatum dignissimos autem provident officia, vero beatae asperiores amet optio. Illum.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus architecto expedita reprehenderit cum quisquam sint quia magnam accusantium aut nemo hic, ipsum, doloribus adipisci molestias quam amet? Dolorem, mollitia corrupti!
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi excepturi impedit laudantium maxime placeat deleniti, ullam facilis repellendus veniam ratione minima obcaecati corrupti blanditiis soluta illum ipsum? Debitis, ut praesentium.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat explicabo labore facilis excepturi eligendi autem ipsa fuga quidem accusamus laborum porro nemo doloremque incidunt voluptatum, dolorum neque. Quas, eius quibusdam!
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia a deleniti corporis quibusdam voluptates dicta, laudantium expedita consequuntur. Dicta, sed! Quia nesciunt maxime alias dolores molestias, debitis tempore similique porro.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore porro voluptas asperiores rem ullam laborum, id dolore aliquid beatae doloremque deserunt nihil quas mollitia quaerat ipsum repudiandae architecto! Dicta, esse?
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit vel, magni, reiciendis dolorum aliquam voluptates eum, amet obcaecati illo eligendi voluptas veniam in harum similique id aperiam doloribus officiis labore.
+                            </p>
+                        </li>
+                        <li>
+                            Update 2.
+    
+                            <p>
+                                
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium eaque, minus dolorum velit soluta rerum. Ducimus numquam qui alias voluptatum dignissimos autem provident officia, vero beatae asperiores amet optio. Illum.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus architecto expedita reprehenderit cum quisquam sint quia magnam accusantium aut nemo hic, ipsum, doloribus adipisci molestias quam amet? Dolorem, mollitia corrupti!
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi excepturi impedit laudantium maxime placeat deleniti, ullam facilis repellendus veniam ratione minima obcaecati corrupti blanditiis soluta illum ipsum? Debitis, ut praesentium.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat explicabo labore facilis excepturi eligendi autem ipsa fuga quidem accusamus laborum porro nemo doloremque incidunt voluptatum, dolorum neque. Quas, eius quibusdam!
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia a deleniti corporis quibusdam voluptates dicta, laudantium expedita consequuntur. Dicta, sed! Quia nesciunt maxime alias dolores molestias, debitis tempore similique porro.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore porro voluptas asperiores rem ullam laborum, id dolore aliquid beatae doloremque deserunt nihil quas mollitia quaerat ipsum repudiandae architecto! Dicta, esse?
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit vel, magni, reiciendis dolorum aliquam voluptates eum, amet obcaecati illo eligendi voluptas veniam in harum similique id aperiam doloribus officiis labore.
+                            </p>
+                        </li>
+                        <li>
+                            Update 3.
+    
+                            <p>
+                                
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium eaque, minus dolorum velit soluta rerum. Ducimus numquam qui alias voluptatum dignissimos autem provident officia, vero beatae asperiores amet optio. Illum.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus architecto expedita reprehenderit cum quisquam sint quia magnam accusantium aut nemo hic, ipsum, doloribus adipisci molestias quam amet? Dolorem, mollitia corrupti!
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi excepturi impedit laudantium maxime placeat deleniti, ullam facilis repellendus veniam ratione minima obcaecati corrupti blanditiis soluta illum ipsum? Debitis, ut praesentium.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat explicabo labore facilis excepturi eligendi autem ipsa fuga quidem accusamus laborum porro nemo doloremque incidunt voluptatum, dolorum neque. Quas, eius quibusdam!
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia a deleniti corporis quibusdam voluptates dicta, laudantium expedita consequuntur. Dicta, sed! Quia nesciunt maxime alias dolores molestias, debitis tempore similique porro.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore porro voluptas asperiores rem ullam laborum, id dolore aliquid beatae doloremque deserunt nihil quas mollitia quaerat ipsum repudiandae architecto! Dicta, esse?
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit vel, magni, reiciendis dolorum aliquam voluptates eum, amet obcaecati illo eligendi voluptas veniam in harum similique id aperiam doloribus officiis labore.
+                            </p>
+                        </li>
+                    </ol> 
+                    <ul> <!--Unorder list-->
+                        <li> <!--List item-->
+                            Update 1.
+                        </li>
+                        <li>
+                            Update 2.
+                        </li>
+                        <li>
+                            Update 3.
+                        </li>
+                    </ul>
+                    <dl> <!--Description list-->
+                        <dt>Something</dt> <!--dt stand for decription term-->
+                        <dd>Description of Something</dd> <!--dd stand for decription detail-->
+            
+                        <dt>Something 2</dt> 
+                        <dd>Description of Something 2</dd>
+                    </dl>
+                </section>
+            </article>    
+        
+            <hr>
+
+            <article id="contact">
+                <h2>
+                    Contact Me
+                </h2>
+                <p>
+                    I'd really like to hear from you
+                </p>
+                <form action="https://httpbin.org/get" method="get">
+                    <fieldset>
+                        <legend>Personal Info</legend>
+                        <p>
+                            <label for="firstName">First Name:</label>
+                        <input 
+                            type="text" 
+                            name="firstName" 
+                            id="firstName" 
+                            placeholder="Jane"
+                            autocomplete="on"
+                            required
+                            autofocus
+                        >
+                        </p>
+                        <p>
+                            <label for="lastName">Last Name:</label>
+                            <input 
+                                type="text" 
+                                name="lastName" 
+                                id="lastName" 
+                                placeholder="Holder"
+                                autocomplete="on"
+                                required
+                            >
+                        </p>
+                        <p>
+                            <label for="passWord">Pass Word:</label>
+                            <input 
+                                type="password" 
+                                name="passWord" 
+                                id="passWord" 
+                                placeholder="something123"
+                                autocomplete="on"
+                                required
+                            >
+                        </p>
+                        <p>
+                            <label for="phone">Phone Number:</label>
+                            <input 
+                                type="tel" 
+                                name="phone" 
+                                id="phone" 
+                                placeholder="+84845540154"
+                                autocomplete="on"
+                                required
+                                pattern="+84[0-9]{9} | [0-9]{10}"
+                            >
+                        </p>
+                        <p>
+                            <label for="decade">Decade:</label>
+                            <input 
+                                type="number" 
+                                name="decade" 
+                                id="decade" 
+                                min="1950"
+                                max="2024"
+                                step="10"
+                                value="1980"
+                            >
+                        </p>
+                        <p>
+                            <label for="food">Favourite Food:</label>
+                            <select name="food" id="food" multiple>
+                                <optgroup label="optionHaveCommon">
+                                    <option value="option1">Option 1</option>
+                                    <option value="option2">Option 2</option>
+                                </optgroup>
+                                
+                                <option value="option3">Option 3</option>
+                                <option value="Others" selected>Others</option>
+                            </select>
+                        </p>
+                        <p>
+                            <label for="coffee">Favorite Coffee</label>
+                            <input type="text" name="coffee" id="coffee" list="coffee-list">
+                            <datalist id="coffee-list">
+                                <option value="coffee"></option>
+                                <option value="latte"></option>
+                                <option value="americano"></option>
+                            </datalist>
+                        </p>
+                    </fieldset>
+                    <br>
+                    <fieldset>
+                        <legend>What is your favourite foods ?</legend>
+                        <p>
+                            <input type="radio" name="foodAsk" id="food1" value="food1">
+                            <label for="food1">Food1</label>
+                        </p>
+                        <p>
+                            <input type="radio" name="foodAsk" id="food2" value="food2">
+                            <label for="food2">Food2</label>
+                        </p>
+                        <p>
+                            <input type="radio" name="foodAsk" id="others" value="others">
+                            <label for="others">Others</label>
+                        </p>
+                    </fieldset>
+                    <br>
+                    <fieldset>
+                        <legend>Do you have pet?</legend>
+                        <p>
+                            <input type="checkbox" name="pet" id="pet1" value="pet1">
+                            <label for="pet1">Pet1</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" name="pet" id="pet2" value="pet1">
+                            <label for="pet2">Pet2</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" name="pet" id="othersPet" value="othersPet">
+                            <label for="othersPet">Others</label>
+                        </p>
+                    </fieldset>
+                    <br>
+                    <fieldset>
+                        <legend>Send Me A Note</legend>
+                        <label for="message">Your Message</label>
+                        <br>
+                        <textarea 
+                            name="message" 
+                            id="message" 
+                            cols="30" 
+                            rows="10" 
+                            placeholder="Type your message here!" 
+                        ></textarea>
+                    </fieldset>
+                    <br>
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset Form</button>
+                    <button 
+                        type="submit" 
+                        formaction="https://httpbin.org/post" 
+                        formmethod="post"
+                    >
+                        Post
+                    </button>
+                </form>
+            </article>
+
+        </main>
         
         <hr>
-        &lt;&lt;&lt; &copy; <a href="about.html"> Thanh </a> &gt;&gt;&gt;
-        <p>
-            <a href="#">Back to Top</a>
-        </p>
+        <footer>
+            <p>
+                &lt;&lt;&lt; &copy; <a href="about.html"> Thanh </a> &gt;&gt;&gt;
+            </p>
+            <p>
+                <a href="#">Back to Top</a>
+            </p>
+        </footer>
 
     </body>
 

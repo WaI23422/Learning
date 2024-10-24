@@ -1,0 +1,42 @@
+/* 
+Universal Selecter:
+* {
+
+} 
+*/
+
+/* 
+    Function's setting
+*/
+body {
+    font-size: 20pt;
+}
+
+h1 {
+    font-size: 70pt;
+}
+
+h2,h3 {
+    font-size: 40pt;
+}
+
+p {
+    color: black; 
+    font-size: 20px;
+}
+
+/* 
+    .name - is a class's setting
+    #name - is an id's setting
+*/
+.highlight {
+    background-color:bisque;
+}
+
+.gray {
+    color: gray;
+}
+
+#test {
+    font-style: italic;
+}

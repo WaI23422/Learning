@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 0.5px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.project {
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 120px; 
+    max-width: 90%; 
+    text-align: center;
+    color: #333;
+    background-color: rgb(248, 233, 158);
+}
+
+#projects .projects-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#projects {
+    background-color: rgb(250, 231, 134);
+}
+
+section {
+    padding: 50px 20px;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}

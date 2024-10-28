@@ -105,6 +105,54 @@
             </ul>
         </h1>
 
+        <!-- Function, filter -->
+        <?php 
+            $SomeBook = [
+                [
+                    'name' => 'Book\'s 1 Name',
+                    'author' => 'Author\'s 1 Name',
+                    'years' => 2024,
+                    'URL' => 'http://example.com'
+                ],
+                [
+                    'name' => 'Book\'s 2 Name',
+                    'author' => 'Author\'s 2 Name',
+                    'years' => 2024,
+                    'URL' => 'http://example.com'
+                ]
+            ]
+        ?>
+
+        <?php foreach ($someBook as $book): ?>
+            <?php if ($book['name'] === 'Book\'s 1 Name'):?>
+                <li>
+                    <a href="<?= $books['URL'] ?>">
+                        <?= $book['name']; ?> (<?= $book['years']; ?>) - By <?= $book['author']; ?>
+                    </a>
+                </li>
+            <?php endif  ?>
+        <?php endforeach ?>
+        
+        <?php 
+            function filterByName($books):array {
+                $filter_book = [];
+                
+                // $idx = 0;
+                foreach ($books as $book){
+                    if ($book['name'] ===  'Book\'s 1 Name') {
+                        // $filter_book[$idx] = $book[$idx++];
+                        $filter_book[] = $book;
+                    }
+                }
+
+                return $filter_book;
+            }
+        ?>
+
+        <!-- Lambda Function -->
+        <?php 
+            
+        ?>
     </body>
 
 </html>

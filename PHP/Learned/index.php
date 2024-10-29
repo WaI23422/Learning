@@ -53,18 +53,18 @@
 
                 // Associated Array:
                 $bookshelf = [
-                    [
-                        "Book1",
-                        "Book2",
-                        "Book3"
-                    ],
+                    // [
+                    //     "Book1",
+                    //     "Book2",
+                    //     "Book3"
+                    // ],
                     // Key Array
                     [
                         'name1' => "Book1",
                         'name2' => 'Book2',
                         'url' => 'someURL'
                     ],
-                    $books
+                    // $books
                 ];
 
                 $book1 = $book[0];
@@ -107,7 +107,7 @@
 
         <!-- Function, filter -->
         <?php 
-            $SomeBook = [
+            $someBook = [
                 [
                     'name' => 'Book\'s 1 Name',
                     'author' => 'Author\'s 1 Name',
@@ -126,7 +126,7 @@
         <?php foreach ($someBook as $book): ?>
             <?php if ($book['name'] === 'Book\'s 1 Name'):?>
                 <li>
-                    <a href="<?= $books['URL'] ?>">
+                    <a href="<?= $book['URL'] ?>">
                         <?= $book['name']; ?> (<?= $book['years']; ?>) - By <?= $book['author']; ?>
                     </a>
                 </li>
@@ -134,12 +134,12 @@
         <?php endforeach ?>
         
         <?php 
-            function filterByName($books):array {
+            function filterByName($books,$fn):array {
                 $filter_book = [];
                 
                 // $idx = 0;
                 foreach ($books as $book){
-                    if ($book['name'] ===  'Book\'s 1 Name') {
+                    if ($fn($book)) {
                         // $filter_book[$idx] = $book[$idx++];
                         $filter_book[] = $book;
                     }
@@ -151,7 +151,9 @@
 
         <!-- Lambda Function -->
         <?php 
-            
+            filterByName($someBook, function ($book){
+                return $book['name'] ===  'Book\'s 1 Name';
+            });
         ?>
     </body>
 

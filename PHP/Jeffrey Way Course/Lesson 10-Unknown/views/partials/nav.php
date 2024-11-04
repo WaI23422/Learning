@@ -18,15 +18,15 @@
                             Home
                         </a>
                         <a 
-                            href="/about.php" 
-                            class=" <?= isURI("/about.php")?>  
+                            href="/about" 
+                            class=" <?= isURI("/about")?>  
                                     rounded-md px-3 py-2 text-sm font-medium hover:bg-gray-700 hover:text-white"
                         >   
                             About
                         </a>
                         <a 
-                            href="/contact.php"
-                            class=" <?= isURI("/contact.php") ?>  
+                            href="/contact"
+                            class=" <?= isURI("/contact") ?>  
                                     rounded-md px-3 py-2 text-sm font-medium hover:bg-gray-700 hover:text-white"
                         >
                             Contact

@@ -1,8 +1,8 @@
-<?php 
-
+<?php  
+ 
 include "function.php";
+include "route.php";
 
-$heading = "Home";
+$uri = new URI;
 
-
-require "views/index_view.php";
+$uri->directURI($_SERVER["REQUEST_URI"]);

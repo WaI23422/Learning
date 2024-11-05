@@ -61,20 +61,20 @@ public class ReplaceWords {
     }
 }
 
-class Trie{
-    Trie [] children;
+class Trie_{
+    Trie_ [] children;
     boolean isEnd;
-    public Trie(){
-        children = new Trie[26];
+    public Trie_(){
+        children = new Trie_[26];
         isEnd =false;
     }
 } 
 
 // 9 ms 55.6 MB
 class ReplaceWords_Solution {
-    Trie root;
+    Trie_ root;
     public String replaceWords(List<String> dictionary, String sentence) {
-        root = new Trie();
+        root = new Trie_();
         for(String word : dictionary){
             insert(word);
         }
@@ -88,7 +88,7 @@ class ReplaceWords_Solution {
     }
 
     public String search(String word){
-        Trie node = root;
+        Trie_ node = root;
         int j = 0;
         for(char c : word.toCharArray()){
             int i = c - 'a';
@@ -106,11 +106,11 @@ class ReplaceWords_Solution {
 
     }
     public void insert(String word){
-        Trie node = root;
+        Trie_ node = root;
         for(char c: word.toCharArray()){
             int i = c - 'a';
             if(node.children[i] == null){
-                node.children[i] = new Trie();
+                node.children[i] = new Trie_();
             }
             node = node.children[i];
         }

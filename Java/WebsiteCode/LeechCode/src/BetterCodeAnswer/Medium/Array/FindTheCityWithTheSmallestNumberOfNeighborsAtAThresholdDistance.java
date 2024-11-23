@@ -302,7 +302,7 @@ class FindTheCityWithTheSmallestNumberOfNeighborsAtAThresholdDistance_Solution2 
 }
 
 // 54ms 44.9MB |  SPFA
-class Solution {
+class FindTheCityWithTheSmallestNumberOfNeighborsAtAThresholdDistance_Solution3 {
 
     @SuppressWarnings("unchecked")
     public int findTheCity(int n, int[][] edges, int distanceThreshold) {
@@ -412,7 +412,7 @@ class Solution {
 }
 
 // 9ms 44.04MB | floyd warshall
-class FindTheCityWithTheSmallestNumberOfNeighborsAtAThresholdDistance_Solution3 {
+class FindTheCityWithTheSmallestNumberOfNeighborsAtAThresholdDistance_Solution4 {
 
     public int findTheCity(int n, int[][] edges, int distanceThreshold) {
         // Large value to represent infinity
@@ -489,7 +489,7 @@ class FindTheCityWithTheSmallestNumberOfNeighborsAtAThresholdDistance_Solution3 
 }
 
 // 7ms 44.04MB | floyd warshall
-class FindTheCityWithTheSmallestNumberOfNeighborsAtAThresholdDistance_Solution4 {
+class FindTheCityWithTheSmallestNumberOfNeighborsAtAThresholdDistance_Solution5 {
     public int findTheCity(int n, int[][] edges, int distanceThreshold) {
         int[][] dist = new int[n][n];
         
@@ -548,7 +548,7 @@ class FindTheCityWithTheSmallestNumberOfNeighborsAtAThresholdDistance_Solution4 
 }
 
 // 5ms 44.24MB
-class FindTheCityWithTheSmallestNumberOfNeighborsAtAThresholdDistance_Solution5 {
+class FindTheCityWithTheSmallestNumberOfNeighborsAtAThresholdDistance_Solution6 {
     public int findTheCity(int n, int[][] edges, int t) {
         int m = edges.length;
         int[][] d = new int[n][n];

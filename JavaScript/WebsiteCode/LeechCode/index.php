@@ -10,4 +10,3 @@
 </body>
 
 <script src="Easy/CheckIfNAndItsDoubleExist.js"></script>
-</html>

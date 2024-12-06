@@ -67,7 +67,7 @@ public class ValidArrangementOfPairs {
 }
 
 // 168ms 107MB
-class Solution {
+class ValidArrangementOfPairs_Solution {
     public int[][] validArrangement(int[][] pairs) {
         int n = pairs.length;
         

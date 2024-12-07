@@ -58,7 +58,7 @@ public class MaximumNumberOfIntegersToChooseFromARangeI {
 }
 
 // 46ms 45.90MB
-class Solution {
+class MaximumNumberOfIntegersToChooseFromARangeI_Solution {
 
     public int maxCount(int[] banned, int n, int maxSum) {
         // Store banned numbers in HashSet

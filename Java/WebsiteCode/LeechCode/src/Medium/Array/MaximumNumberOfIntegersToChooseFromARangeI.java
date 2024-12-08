@@ -55,7 +55,7 @@ public class MaximumNumberOfIntegersToChooseFromARangeI {
 }
 
 // 4ms 45.90MB
-class Solution {
+class MaximumNumberOfIntegersToChooseFromARangeI_Solution {
     public int maxCount(int[] banned, int n, int maxSum) {
         int sum = 0;
         int result = 0;

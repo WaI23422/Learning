@@ -59,7 +59,7 @@ public class MinimumLimitOfBallsInABag {
 }
 
 // 24ms 60.99MB
-class Solution {
+class MinimumLimitOfBallsInABag_Solution {
     public boolean ispossible(int nums[], int maxOperations, int k) {
       for (int i = 0; i < nums.length; i++) {
           if (nums[i] > k) {

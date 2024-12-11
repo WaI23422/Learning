@@ -62,7 +62,7 @@ public class LongestCommonSubsequence {
 }
 
 // 6 ms 41.4 MB
-class Solution {
+class LongestCommonSubsequence_Solution {
     public int longestCommonSubsequence(String text1, String text2) {
         if(text1.equals(text2))
            return text1.length();
@@ -107,7 +107,7 @@ class Solution {
 }
 
 // 20 ms 51 MB
-class LongestCommonSubsequence_Solution {
+class LongestCommonSubsequence_Solution2 {
     public int longestCommonSubsequence(String text1, String text2) {
         // Lengths of the input strings
         int length1 = text1.length();

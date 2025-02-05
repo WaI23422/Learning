@@ -32,6 +32,26 @@ class Solution:
             return False
         return True
 
+    def func3 (self, s1: str, s2: str) -> bool:
+        s1_len = len(s1)
+        
+        swap_count = 0
+        swap_diff_pos = [0]*2
+        for i in range(s1_len):
+            if s1[i] != s2[i]:
+                swap_diff_pos[swap_count-1] = i
+                swap_count += 1
+
+            if swap_count > 2:
+                return False
+
+        if swap_count%2 == 1:
+            return False
+        if swap_count/2 == 1 and (s1[swap_diff_pos[0]] != s2[swap_diff_pos[1]] or s1[swap_diff_pos[1]] != s2[swap_diff_pos[0]]):
+            return False
+        
+        return True
+    
 if __name__ == "__main__":
     solution = Solution()
     testcase_list = [
